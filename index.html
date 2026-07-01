@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Earn Video</title>
+<style>
+body{
+    font-family:Arial,sans-serif;
+    background:#f2f2f2;
+    text-align:center;
+    margin:0;
+}
+header{
+    background:#0084ff;
+    color:white;
+    padding:15px;
+}
+.container{
+    margin:20px;
+}
+button{
+    background:#28a745;
+    color:white;
+    padding:12px 20px;
+    border:none;
+    border-radius:5px;
+    font-size:18px;
+    cursor:pointer;
+}
+button:hover{
+    background:#218838;
+}
+#points{
+    font-size:24px;
+    color:#0084ff;
+}
+</style>
+</head>
+<body>
+
+<header>
+<h1>ভিডিও দেখে পয়েন্ট অর্জন করুন</h1>
+</header>
+
+<div class="container">
+<h2>আপনার পয়েন্ট: <span id="points">0</span></h2>
+
+<iframe width="320" height="180"
+src="https://www.youtube.com/embed/dQw4w9WgXcQ"
+allowfullscreen></iframe>
+
+<br><br>
+
+<button onclick="earn()">ভিডিও দেখেছি</button>
+
+</div>
+
+<script>
+let point = 0;
+
+function earn(){
+    point += 10;
+    document.getElementById("points").innerText = point;
+}
+</script>
+
+</body>
+</html>
